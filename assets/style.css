@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+}
+
+.showcase-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 50px;
+}
+
+.showcase-list li {
+    color: #fff;
+    list-style: none;
+    text-align: center;
+}
+
+.showcase-list li figure img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.to-cart-btn {
+    background-color: #FF0BAC;
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    height: 40px;
+    width: 120px;
+    border-radius: 5px 20px;
+    transition: all 0.3s;
+}
+
+.to-cart-btn:hover {
+    background-color: #35F0D0;
+}
