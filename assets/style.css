@@ -80,6 +80,11 @@ h1{
     object-fit: cover;
 }
 
+.showcase-list li figure figcaption {
+    margin: 15px 0;
+    font-size: 1.2rem;
+}
+
 .to-cart-btn {
     background-color: #FF0BAC;
     color: #fff;
@@ -89,6 +94,7 @@ h1{
     width: 120px;
     border-radius: 5px 20px;
     transition: all 0.3s;
+    cursor: pointer;
 }
 
 .to-cart-btn:hover {
