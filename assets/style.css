@@ -13,24 +13,30 @@ body {
 
 .mart-name{
     text-align: left;
-    width: 100%;
-    position: absolute;
-    top:150px;
+    margin:200px auto 0 100px;
+    /* width: 100%; */
+    /* position: absolute; */
+    /* top:150px; */
 }
 
 h1{
     color: rgb(252, 5, 178);
     font-size: 60px;
-    margin:0 0 0 100px;
+    /* margin:0 0 0 100px; */
     font-weight: lighter;
-    position: fixed;
+    /* position: fixed; */
+}
+
+/* flex */
+.flex-container{
+   display: flex;
 }
 
 /* side bar */
 .sidebar-container{
     width:20%;
     margin:100px 0 0 100px ;
-    position: fixed;
+    /* position: fixed; */
 }
 
 /* side bar- nav */
@@ -58,6 +64,18 @@ h1{
 
 .menu-item a:hover{
     color:rgb(6, 233, 203) ;
+}
+
+#cart{
+    font-size: 30px;
+    color:rgb(252, 5, 178);
+    text-decoration: none;
+    line-height: 70px;
+}
+
+#cart:hover{
+    color:rgb(6, 233, 203) ;
+    cursor: pointer;
 }
 
 /* side bar - cart container */
@@ -137,9 +155,13 @@ h1{
 
 
 /* showcase*/
-.showcase{
+/* .showcase{
     width:60%;
     margin:250px 100px 0 auto;
+} */
+main{
+    width:60%;
+    margin:100px 100px 0 auto;
 }
 
 #showcase-list {
