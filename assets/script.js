@@ -45,8 +45,6 @@ const totalPrice=document.querySelector(".total-price-holder")
 const hr=document.querySelector(".hr-wrapper")
 const numOfItem=document.querySelector(".menu-list").lastElementChild.firstElementChild
 
-console.log(numOfItem)
-
 // use this array to check if product is already in cart
 const exist = new Array()
 
