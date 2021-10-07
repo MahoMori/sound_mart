@@ -1,3 +1,4 @@
+// play songs
 const bgm = document.getElementById("bgm")
 const vol = bgm.volume
 bgm.volume = vol - 0.5
@@ -21,3 +22,17 @@ showcaseLi.addEventListener("click", function(e) {
         }
     }
 })
+
+// diplay cart
+let display = false
+
+document.getElementById("cart").onclick = function() {
+  if (!display){
+    document.getElementById("cart-container").style.visibility="visible";
+    display = true
+  }else{
+    document.getElementById("cart-container").style.visibility="hidden";
+    display = false
+  }
+  
+};
