@@ -33,6 +33,7 @@ h1{
     position: fixed;
 }
 
+/* side bar- nav */
 .nav{
     width:100%;
     display: flex;
@@ -54,6 +55,85 @@ h1{
     text-decoration: none;
     line-height: 70px;
 }
+
+.menu-item a:hover{
+    color:rgb(6, 233, 203) ;
+}
+
+/* side bar - cart container */
+#cart-container{
+    background-color: rgb(45, 143, 122);
+    width: 130%;
+    margin:30px 0;
+    visibility: hidden;
+  }
+/* side bar - placeholders */
+  .item-wrapper{
+      width:100%;
+      margin:10px auto;
+  }
+  .item{
+    height:120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .fas{
+      font-size: 25px;
+      color:rgb(252, 5, 178);
+      background-color: white;
+      border:1px solid rgb(45, 143, 122);
+      border-radius: 50%;
+      margin-left:30px;
+  }
+  .fas:hover{
+      font-size: 30px;
+      color:red;
+  }
+
+  .item-img-placeholder{
+      width:80px;
+      height:80px;
+      object-fit: cover;
+  }
+
+  .title-placeholder{
+      color: white;
+      font-size: 20px;
+  }
+
+  .each-price-holder{
+    color:white;
+    font-size: 20px;
+    margin-right:30px;
+}
+
+
+  .total-price-holder{
+    color:white;
+    font-size: 20px;
+  }
+
+
+/*  side bar - hr & total: */
+  .hr-wrapper{
+    text-align: center;
+  }
+  hr{
+    border: 1px solid white;
+    width:80%;
+    margin:auto;
+  }
+  
+  .total-wrapper{
+    display:flex;
+    justify-content: space-between;
+    padding: 30px;
+  }
+  .total{
+    color:white;
+    font-size: 20px;
+  }
 
 
 /* showcase*/

@@ -63,3 +63,16 @@ for(el of seleall) {
 // } else {
 //     alert("no")
 // }
+
+let display = false
+
+document.getElementById("cart").onclick = function() {
+  if (!display){
+    document.getElementById("cart-container").style.visibility="visible";
+    display = true
+  }else{
+    document.getElementById("cart-container").style.visibility="hidden";
+    display = false
+  }
+  
+};
