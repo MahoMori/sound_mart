@@ -3,22 +3,23 @@ const bgm = document.getElementById("bgm")
 const vol = bgm.volume
 bgm.volume = vol - 0.5
 
+let playing = ""
+
 const showcaseLi = document.querySelector("#showcase-list")
 
 showcaseLi.addEventListener("click", function(e) {
     if(e.target.tagName === "IMG") {
-        const jacket = e.target
+        let title = e.target.alt
 
-        if(!jacket.classList.contains("playing")) {
-            let title = jacket.alt
+        if(playing !== title) {
             bgm.src = "assets/audio/" + title + ".mp3"
     
             bgm.play()
     
-            jacket.classList.add("playing")
+            playing = title
         } else {
             bgm.pause()
-            jacket.classList.remove("playing")
+            playing = ""
         }
     }
 })
