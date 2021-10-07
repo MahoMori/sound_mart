@@ -42,7 +42,7 @@ document.getElementById("cart").onclick = function() {
 const cartContainer=document.querySelector("#cart-container")
 const totalPrice=document.querySelector(".total-price-holder")
 const hr=document.querySelector(".hr-wrapper")
-const numOfItem=document.querySelector(".menu-list").lastElementChild.firstElementChild.firstElementChild
+const numOfItem=document.querySelector(".menu-list").lastElementChild.firstElementChild
 
 console.log(numOfItem)
 
