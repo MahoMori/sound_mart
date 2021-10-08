@@ -1,26 +1,37 @@
 // play songs
+// get audio tag
 const bgm = document.getElementById("bgm")
-const vol = bgm.volume
-bgm.volume = vol - 0.5
 
+// change volume
+bgm.volume = 0.5
+
+// this is to check if song is playing now or not
 let playing = ""
 
+// get ul that includes all images
 const showcaseLi = document.querySelector("#showcase-list")
 
 showcaseLi.addEventListener("click", function(e) {
+    // check if clikced element is IMG
     if(e.target.tagName === "IMG") {
         let title = e.target.alt
 
+        // check if the song is playing
         if(playing !== title) {
+            // change img src to the one clicked
             bgm.src = "assets/audio/" + title + ".mp3"
     
             bgm.play()
-    
+
+            // update playing string
             playing = title
+
+        // if song is already playingd
         } else {
+            // pause song
             bgm.pause()
 
-
+            // update playing string
             playing = ""
         }
     }
