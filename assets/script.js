@@ -19,6 +19,8 @@ showcaseLi.addEventListener("click", function(e) {
             playing = title
         } else {
             bgm.pause()
+
+
             playing = ""
         }
     }
@@ -66,10 +68,8 @@ showcaseLi.addEventListener("click", function(e) {
             const listDiv = document.createElement("div")
             listDiv.classList.add("item")
 
-            // use imgAlt for song title
-            // we will replace "-" to " "(space) and change first letter to capital
-            // we can create function for that and pass imgAlt as argument
-            const songName = showSongName(imgAlt)
+            // use figcaption for song title
+            const songName = img.previousElementSibling.textContent
 
             // add img, song title and price to div
             // we can write class name here
@@ -94,6 +94,9 @@ showcaseLi.addEventListener("click", function(e) {
             intNumOfItem = parseInt(numOfItem.textContent)
             intNumOfItem++
             numOfItem.textContent = intNumOfItem.toString()
+            if(intNumOfItem !== 0){
+              document.getElementById("nothing").style.display = "none"
+            }
 
         // if the product is already in cart
         } else {
@@ -130,9 +133,8 @@ cartContainer.addEventListener("click", function(e) {
         intNumOfItem = parseInt(numOfItem.textContent)
         intNumOfItem--
         numOfItem.textContent = intNumOfItem.toString()
+        if(intNumOfItem === 0){
+          document.getElementById("nothing").style.display = "block"
+        }
     }
 })
-
-const showSongName = alt => {
-    return alt.replace("_", " ").toUpperCase()
-}
