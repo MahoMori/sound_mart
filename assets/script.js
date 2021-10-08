@@ -68,10 +68,8 @@ showcaseLi.addEventListener("click", function(e) {
             const listDiv = document.createElement("div")
             listDiv.classList.add("item")
 
-            // use imgAlt for song title
-            // we will replace "-" to " "(space) and change first letter to capital
-            // we can create function for that and pass imgAlt as argument
-            const songName = imgAlt
+            // use figcaption for song title
+            const songName = img.previousElementSibling.textContent
 
             // add img, song title and price to div
             // we can write class name here
@@ -140,4 +138,3 @@ cartContainer.addEventListener("click", function(e) {
         }
     }
 })
-
