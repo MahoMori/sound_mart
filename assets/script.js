@@ -19,6 +19,8 @@ showcaseLi.addEventListener("click", function(e) {
             playing = title
         } else {
             bgm.pause()
+
+
             playing = ""
         }
     }
@@ -94,6 +96,9 @@ showcaseLi.addEventListener("click", function(e) {
             intNumOfItem = parseInt(numOfItem.textContent)
             intNumOfItem++
             numOfItem.textContent = intNumOfItem.toString()
+            if(intNumOfItem !== 0){
+              document.getElementById("nothing").style.display = "none"
+            }
 
         // if the product is already in cart
         } else {
@@ -130,5 +135,9 @@ cartContainer.addEventListener("click", function(e) {
         intNumOfItem = parseInt(numOfItem.textContent)
         intNumOfItem--
         numOfItem.textContent = intNumOfItem.toString()
+        if(intNumOfItem === 0){
+          document.getElementById("nothing").style.display = "block"
+        }
     }
 })
+
