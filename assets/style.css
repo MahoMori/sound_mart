@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -107,21 +107,21 @@ h1{
     display: grid;
     grid-template-columns: 15% 30% 35% 10%;
   }
-  .fas{
+  .fa-times-circle{
       font-size: 25px;
       color:rgb(252, 5, 178);
       margin-left:10px;
+      
   }
-  .fas:hover{
+  .fa-times-circle:hover{
       font-size: 30px;
       color:red;
   }
 
-  .fas::before {
+  .fa-times-circle::before {
     background-color: white;
-    border:1px solid rgb(45, 143, 122);
     border-radius: 50%;
-  }
+  } 
 
   .item-img-placeholder{
       width:80px;
@@ -218,4 +218,44 @@ main{
 
 .to-cart-btn:hover {
     background-color: #35F0D0;
+}
+
+.about-container{
+    width:50%;
+    margin:100px 100px 100px 40%;
+}
+
+.about-h2{
+    color: white;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about-p{
+    color: white;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+footer{
+    border-top: 3px solid #35F0D0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-h3{
+    font-size: 30px;
+    color: white;
+    margin:50px ;
+}
+
+.icon-wrapper{
+    width:200px;
+    margin: 50px;
+}
+
+.fab, .fa-music{
+    color:white;
+    font-size: 30px;
+    margin: 10px;
 }
