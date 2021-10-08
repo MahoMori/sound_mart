@@ -69,7 +69,7 @@ showcaseLi.addEventListener("click", function(e) {
             // use imgAlt for song title
             // we will replace "-" to " "(space) and change first letter to capital
             // we can create function for that and pass imgAlt as argument
-            const songName = imgAlt
+            const songName = showSongName(imgAlt)
 
             // add img, song title and price to div
             // we can write class name here
@@ -132,3 +132,7 @@ cartContainer.addEventListener("click", function(e) {
         numOfItem.textContent = intNumOfItem.toString()
     }
 })
+
+const showSongName = alt => {
+    return alt.replace("_", " ").toUpperCase()
+}
