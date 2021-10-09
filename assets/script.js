@@ -55,7 +55,7 @@ document.getElementById("cart").onclick = function() {
 // adding and deleting items
 const cartContainer=document.querySelector("#cart-container")
 const totalPrice=document.querySelector(".total-price-holder")
-const hr=document.querySelector(".hr-wrapper")
+const itemWrapper=document.querySelector(".item-wrapper")
 const numOfItem=document.querySelector(".menu-list").lastElementChild.firstElementChild
 
 // use this array to check if product is already in cart
@@ -89,8 +89,8 @@ showcaseLi.addEventListener("click", function(e) {
                 <p class="title-placeholder">${songName}</p>
                 <p class="each-price-holder">${price}</p>`
 
-            // append div before hr element
-            hr.before(listDiv)
+            // append div inside item-wrapper div
+            itemWrapper.appendChild(listDiv)
       
             // delete the first '$' and change to int
             let intPrice = parseInt(price.slice(1))
