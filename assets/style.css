@@ -102,7 +102,7 @@ h1{
     justify-content: center;
     align-items: center;
     display: grid;
-    grid-template-columns: 15% 30% 35% 10%;
+    grid-template-columns: 15% 35% 40% 10%;
   }
   .fa-times-circle{
       font-size: 25px;
@@ -159,13 +159,12 @@ h1{
   .total-wrapper{
     display:flex;
     justify-content: space-between;
-    padding:30px 50px;
+    padding: 30px 50px;
   }
   .total{
     color:white;
     font-size: 20px;
   }
-
 
 /* showcase*/
 /* .showcase{
@@ -194,6 +193,12 @@ main{
     height: 200px;
     object-fit: cover;
     cursor: pointer;
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px;
+    transition: box-shadow 0.3s;
+}
+
+#showcase-list li figure img:hover {
+    box-shadow: rgba(53, 240, 208, 0.4) -5px 5px, rgba(53, 240, 208, 0.3) -10px 10px, rgba(53, 240, 208, 0.2) -15px 15px, rgba(53, 240, 208, 0.1) -20px 20px, rgba(53, 240, 208, 0.05) -25px 25px;
 }
 
 #showcase-list li figure figcaption {
@@ -216,6 +221,34 @@ main{
 .to-cart-btn:hover {
     background-color: #35F0D0;
 }
+
+/* #now-playing {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+    background-color: #35F0D0;
+    border-radius: 50px;
+    margin: 0 10px 10px 0;
+}
+
+.now-playing-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.moving {
+    background-color: #FF0BAC;
+} */
+
+
 
 .about-container{
     width:50%;

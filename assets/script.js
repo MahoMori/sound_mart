@@ -8,13 +8,27 @@ bgm.volume = 0.5
 // this is to check if song is playing now or not
 let playing = ""
 
+// change shadow color
+const imgArr = document.querySelectorAll(".cover-img")
+const shadowStyle = {
+    "skyblue": "rgba(53, 240, 208, 0.4) -5px 5px, rgba(53, 240, 208, 0.3) -10px 10px, rgba(53, 240, 208, 0.2) -15px 15px, rgba(53, 240, 208, 0.1) -20px 20px, rgba(53, 240, 208, 0.05) -25px 25px"
+}
+
+
 // get ul that includes all images
 const showcaseLi = document.querySelector("#showcase-list")
 
 showcaseLi.addEventListener("click", function(e) {
     // check if clikced element is IMG
     if(e.target.tagName === "IMG") {
-        let title = e.target.alt
+        let img = e.target
+        let title = img.alt
+
+        imgArr.forEach(img => {
+            if(img.style.boxShadow === shadowStyle["skyblue"]) {
+                img.style.boxShadow = ""
+            }
+        });
 
         // check if the song is playing
         if(playing !== title) {
@@ -26,6 +40,8 @@ showcaseLi.addEventListener("click", function(e) {
             // update playing string
             playing = title
 
+            img.style.boxShadow = shadowStyle["skyblue"]
+
         // if song is already playingd
         } else {
             // pause song
@@ -33,6 +49,8 @@ showcaseLi.addEventListener("click", function(e) {
 
             // update playing string
             playing = ""
+
+            img.style.boxShadow = ""
         }
     }
 })
@@ -54,7 +72,7 @@ document.getElementById("cart").onclick = function() {
 
 // adding and deleting items
 const cartContainer=document.querySelector("#cart-container")
-const hr=document.querySelector(".hr-wrapper")
+const itemWrapper=document.querySelector(".item-wrapper")
 
 const totalPrice=document.querySelector(".total-price-holder")
 let countTotalPrice = 0
@@ -94,7 +112,7 @@ showcaseLi.addEventListener("click", function(e) {
                 <p class="each-price-holder">${price}</p>`
 
             // append div before hr element
-            hr.before(listDiv)
+            itemWrapper.appendChild(listDiv)
       
             // delete the first '$' and change to int
             let intPrice = parseInt(price.slice(1))
