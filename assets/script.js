@@ -54,9 +54,12 @@ document.getElementById("cart").onclick = function() {
 
 // adding and deleting items
 const cartContainer=document.querySelector("#cart-container")
-const totalPrice=document.querySelector(".total-price-holder")
 const itemWrapper=document.querySelector(".item-wrapper")
+const totalPrice=document.querySelector(".total-price-holder")
+let countTotalPrice = 0
+
 const numOfItem=document.querySelector(".menu-list").lastElementChild.firstElementChild
+let countNumOfItem = 0
 
 // use this array to check if product is already in cart
 const exist = new Array()
@@ -95,17 +98,17 @@ showcaseLi.addEventListener("click", function(e) {
             // delete the first '$' and change to int
             let intPrice = parseInt(price.slice(1))
             // calculate total price
-            intPrice = intPrice + parseInt(totalPrice.textContent.slice(1))
+            countTotalPrice = intPrice + countTotalPrice
             // reflect change to totalPrice
-            totalPrice.textContent = "$" + intPrice.toString()
+            totalPrice.textContent = "$" + countTotalPrice.toString()
       
             // use imgAlt as a flag to indicate that this product is already in cart
             exist.push(imgAlt)
 
-            intNumOfItem = parseInt(numOfItem.textContent)
-            intNumOfItem++
-            numOfItem.textContent = intNumOfItem.toString()
-            if(intNumOfItem !== 0){
+            // change numbers of item in cart
+            countNumOfItem++
+            numOfItem.textContent = countNumOfItem
+            if(countNumOfItem !== 0){
               document.getElementById("nothing").style.display = "none"
             }
 
@@ -131,8 +134,8 @@ cartContainer.addEventListener("click", function(e) {
         // price change
         let delPrice = delListDiv.lastElementChild.textContent
         delPrice = parseInt(delPrice.slice(1))
-        intTotalPrice = parseInt(totalPrice.textContent.slice(1)) - delPrice
-        totalPrice.textContent = "$" + intTotalPrice.toString()
+        countTotalPrice = countTotalPrice - delPrice
+        totalPrice.textContent = "$" + countTotalPrice.toString()
 
         // delete product
         cartContainer.removeChild(delListDiv)
@@ -141,10 +144,9 @@ cartContainer.addEventListener("click", function(e) {
         const index = exist.indexOf(delImgAlt)
         exist.splice(index, 1)
 
-        intNumOfItem = parseInt(numOfItem.textContent)
-        intNumOfItem--
-        numOfItem.textContent = intNumOfItem.toString()
-        if(intNumOfItem === 0){
+        countNumOfItem--
+        numOfItem.textContent = countNumOfItem.toString()
+        if(countNumOfItem === 0){
           document.getElementById("nothing").style.display = "block"
         }
     }
