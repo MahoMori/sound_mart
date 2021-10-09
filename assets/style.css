@@ -94,13 +94,13 @@ h1{
 /* side bar - placeholders */
   .item-wrapper{
       width:100%;
-      
   }
   .item{
     height:120px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 30px;
     display: grid;
     grid-template-columns: 15% 35% 40% 10%;
   }
@@ -157,9 +157,9 @@ h1{
   }
   
   .total-wrapper{
-    display:flex;
-    justify-content: space-between;
-    padding: 30px 50px;
+    padding: 30px 30px;
+    display: grid;
+    grid-template-columns: 90% 10%;
   }
   .total{
     color:white;
